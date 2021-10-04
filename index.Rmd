@@ -1,7 +1,7 @@
 --- 
 title: "Indicadores de reportes"
 author: "extraidos a partir del instrumento de captura de datos CSPro"
-date: "`r Sys.Date()`"
+date: ""
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
