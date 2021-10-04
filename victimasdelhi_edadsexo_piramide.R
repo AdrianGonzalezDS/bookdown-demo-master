@@ -45,7 +45,7 @@ victimasdelhi_piramide <- ggplot(data=victimasdelhi_sel,aes(x=cut(edad__victima_
   geom_bar(data=subset(victimasdelhi_sel,sexo_victima_2=="Masculino"),aes(y=..count..*(-1))) +
   scale_x_discrete(labels=c("< 1",paste0(seq(1,91,5),"-",seq(5,100,5))), drop=T) +
   scale_y_continuous(breaks=seq(-70,70,10),labels=abs(seq(-70,70,10)))+
-  xlab("Edad (aÃ±os)") + ylab("NÃºmero de vÃ­ctimas") +
+  xlab("Edad (años)") + ylab("Número de víctimas") +
   coord_flip()+
   #bbc_style()+
   theme_classic( )+
@@ -60,7 +60,7 @@ victimasdelhi_piramide <- ggplot(data=victimasdelhi_sel,aes(x=cut(edad__victima_
         #axis.title.x = element_text(size= 7,color='black', angle=0, vjust = 0.5),
         axis.text = element_text(size= 11,color='black', angle=0, vjust = 0.5),
         strip.text = element_blank())+
-  labs(caption = stringr::str_glue("Fuente: Observatorio de prensa OVV  \nn = {nrow(victimasdelhi)} ({sum(is.na(victimasdelhi$sexo_victima_2) | is.na(victimasdelhi$edad__victima_2) |victimasdelhi$edad__victima_2 == 99 | victimasdelhi$sexo_victima_2 == 'No informa')} casos perdidos por edad y sexo faltante) en {prensa_victimasdelhi_sel} medios de prensa consultados \nPerÃ­odo de recolecciÃ³n de informaciÃ³n: {format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}"))
+  labs(caption = stringr::str_glue("Fuente: Observatorio de prensa OVV  \nn = {nrow(victimasdelhi)} ({sum(is.na(victimasdelhi$sexo_victima_2) | is.na(victimasdelhi$edad__victima_2) |victimasdelhi$edad__victima_2 == 99 | victimasdelhi$sexo_victima_2 == 'No informa')} casos perdidos por edad y sexo faltante) en {prensa_victimasdelhi_sel} medios de prensa consultados \nPeríodo de recolección de información: {format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}"))
 
 victimasdelhi_piramide
 
