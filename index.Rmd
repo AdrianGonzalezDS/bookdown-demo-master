@@ -13,7 +13,7 @@ description: ""
 cover-image: "images/cover.png"
 
 ---
-# Prefacio {-}
+# OVV {-}
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://observatoriodeviolencia.org.ve/news/informe-semestral-regional-de-violencia-2021-guarico/'}
 knitr::include_graphics('images/cover.jpg', dpi = NA)
