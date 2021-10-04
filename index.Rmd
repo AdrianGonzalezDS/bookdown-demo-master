@@ -1,6 +1,6 @@
 --- 
-title: "Indicadores de reportes"
-author: "extraidos a partir del instrumento de captura de datos CSPro"
+title: "Indicadores de violencia"
+author: "Para la elaboración de reportes del OVV"
 date: ""
 site: bookdown::bookdown_site
 output: bookdown::gitbook
