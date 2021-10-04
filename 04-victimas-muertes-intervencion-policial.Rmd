@@ -26,7 +26,7 @@ plot(victimasmil_conyugal_donagraf)
 
 ## Condición de la víctima 
 
-(ref:victimasmilcondicion) Proporción de víctimas por intervención policial que eran civiles o eran funcionarios de seguridad.
+(ref:victimasmilcondicion) Proporción de víctimas por intervención policial discriminadas por su condición: civiles o funcionarios de seguridad.
 
 ```{r victimasmilcondiciondonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("victimasmil_condicion_donagraf.R", echo = F,local = knitr::knit_global())
@@ -38,7 +38,7 @@ plot(victimasmil_condicion_donagraf)
 
 ## ¿La víctima era delincuente? 
 
-(ref:victimasmildeli) Proporción de víctimas que eran o no delincuentes.
+(ref:victimasmildeli) Proporción de víctimas por intervención policial discriminadas según sus antecedentes delictuales.
 
 ```{r victimasmildelidonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("victimasmil_victideli_donagraf.R", echo = F,local = knitr::knit_global())
@@ -50,7 +50,7 @@ plot(victimasmil_victideli_donagraf)
 
 ## Actividad de la víctima 
 
-(ref:victimasmilactividad) Proporción de víctimas que eran o no delincuentes.
+(ref:victimasmilactividad) Proporción de víctimas por intervención policial discriminadas según la actividad que realizaban.
 
 ```{r victimasmilactividaddonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("victimasmil_actividad_donagraf.R", echo = F,local = knitr::knit_global())
