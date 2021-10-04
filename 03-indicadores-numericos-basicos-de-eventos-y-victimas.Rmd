@@ -10,8 +10,8 @@ c.	Número total de eventos de delitos: **`r {nrow(sucesosdelito)}`**
 d.	Número total del delito de homicidio intencional: **`r {nrow(sucesoshi)}`**
 e.	Número total de tentativa de homicidio intencional: **`r {nrow(sucesosthi)}`**
 f.	Número total de los delitos restantes: **`r {nrow(sucesosodel)}`**
-g.	Número total de muertes por intervención policial: **$\ge$ `r nmip`**
-h.	Número total de víctimas de delitos reportados: **$\ge$ `r ndel`**
-i.	Número total de víctimas de homicidio intencional: **$\ge$ `r ndelhi`**
-j.	Número total de víctimas de tentativa de homicidio intencional: **$\ge$ `r ndelthi`** 
+g.	Número total de muertes por intervención policial: $\ge$ **`r nmip`**
+h.	Número total de víctimas de delitos reportados: $\ge$ **`r ndel`**
+i.	Número total de víctimas de homicidio intencional: $\ge$ **`r ndelhi`**
+j.	Número total de víctimas de tentativa de homicidio intencional: $\ge$ **`r ndelthi`** 
 
