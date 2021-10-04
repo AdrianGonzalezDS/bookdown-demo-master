@@ -1,0 +1,211 @@
+# Eventos homicidio intencional (HI)
+## Presunción del codificador HI
+Nótese la alta cardinalidad de casos perdidos debido a información faltante, esto probablemente obedezca a que en la pregunta 31 del cuestionario una vez seleccionada la opción homicidio intencional, el sistema te indica pasar a la pregunta 34. Por esta razón, es posible que la mayoría de los codificadores dejen la casilla "presunción del codificador" (pregunta 32) vacía y, en consecuencia, el sistema la sustituye con un 'NA'
+
+(ref:sucesoshipreshi) Número de sucesos discriminados según si la calificación como homicidio intencional es una presunción del codificador o si el artículo de prensa lo especifica claramente.
+
+```{r sucesoshiprespie, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_presuncion_pie.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshiprespiegraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshipreshi)'}
+plot(victimasdelhipreshi_pie)
+```
+
+## Tipo de muerte HI
+
+(ref:sucesoshitipomuhi) Número de sucesos para homicidio intencional discriminados según el tipo de muerte.
+
+(ref:sucesoshipres35hi) Número de sucesos discriminados según si la calificación del tipo de muerte corresponde a una presunción del codificador o si el artículo de prensa lo especifica claramente.
+
+```{r sucesoshitipomuebarra, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_tipomuerte_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshitipomuepres35, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_presunciontmu35_pie.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshitipomubarragraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshitipomuhi)'}
+plot(victimasdelhitipomuhi_barras)
+```
+
+```{r sucesohitipomuhitable, echo=FALSE, warning=FALSE,cache=F}
+knitr::kable(
+  head(tabla_tipomuerte[, 1:3], 9), booktabs = TRUE,align = "lcr",
+  caption = 'Número de sucesos calificados como homicidio intencional discriminados por el tipo de muerte de las víctimas.'
+)
+
+```
+
+```{r sucesoshitipomupres35piegraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshipres35hi)'}
+plot(sucesosdelhipres35tmu_pie)
+```
+
+## Número de víctimas HI
+
+(ref:sucesoshitipomuhivic) Número de víctimas por suceso para homicidio intencional discriminados según el tipo de muerte.
+
+```{r sucesoshitipomuevictimaboxplot, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_tipomuhi_vic_boxplot.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshitipomuboxplotgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshitipomuhivic)'}
+plot(sucesoshi_tipomuhi_vic_boxplot)
+```
+
+## Número de victimario HI
+
+(ref:sucesoshitipomuhivictimario) Número de victimarios por suceso de homicidio intencional discriminados según el tipo de muerte. Media: *; mediana: |; valor atípico: ○.
+
+```{r sucesoshitipomuevictimariomaboxplot, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_tipomuhi_victimario_boxplot.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshitipomuvictimarioboxplotgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshitipomuhivictimario)'}
+plot(sucesoshi_tipomuhi_victimario_boxplot)
+```
+
+## Día de ocurrencia HI
+
+(ref:sucesoshicuandohi) Número de sucesos de de homicidio intencional discriminados según día de ocurrencia.
+
+```{r sucesoshicuandobarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_cuando_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshicuandobarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshicuandohi)'}
+plot(sucesoshicuando_barras)
+```
+
+## Sitio de ocurrencia del HI
+
+(ref:sucesoshidondehi) Número de sucesos de homicidio intencional discriminados según el sitio de ocurrencia.
+
+```{r sucesoshidondebarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_donde_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshidondebarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshidondehi)'}
+plot(sucesoshidonde_barras)
+```
+
+(ref:sucesoshicercania) Número de sucesos de homicidio intencional discriminados según cercanía al sitio donde vivia la víctima.
+
+```{r sucesoshicercaniabarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_cercania_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshicercaniabarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshicercania)'}
+plot(sucesoshicercania_barras)
+```
+
+## Tipo de arma
+
+(ref:sucesoshitipoarmahi) Número de sucesos de homicidio intencional discriminados según el tipo de arma utilizada.
+
+```{r sucesoshitipoarmabarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_tipoarma_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshitipoarmabarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshitipoarmahi)'}
+plot(sucesoshitipoarma_barras)
+```
+
+## ¿Quién fue el victimario? 
+
+(ref:sucesoshiquienvictimariohi) Número de sucesos de homicidio intencional discriminados según quién fue el victimario.
+
+```{r sucesoshiquienvictimariobarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_quienvictimario_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesoshiquienvictimariobarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshiquienvictimariohi)'}
+plot(sucesoshiquienvictimario_barras)
+```
+
+### ¿Conocido o familiar? 
+
+```{r sucesoshiconocidofamiliarvictimariobarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_conocidofamiliarvictimario_barras.R", echo = F,local = knitr::knit_global())
+```
+
+En este caso la alta cardinalidad de casos perdidos (`r {sum(is.na(sucesoshi_conocidofamiliarvictimario$victimario_conocido)| sucesoshi_conocidofamiliarvictimario$victimario_conocido == 'NA'|is.na(sucesoshi_conocidofamiliarvictimario$infodelito2)|sucesoshi_conocidofamiliarvictimario$infodelito2 == 'NA')} `) no debe sorprender ya que la opción "familiar/conocido" de la pregunta No. 58 constituye un subconjunto (`r  {nrow(sucesoshi_conocidofamiliarvictimario)}-{sum(is.na(sucesoshi_conocidofamiliarvictimario$victimario_conocido)| sucesoshi_conocidofamiliarvictimario$victimario_conocido == 'NA'|is.na(sucesoshi_conocidofamiliarvictimario$infodelito2)|sucesoshi_conocidofamiliarvictimario$infodelito2 == 'NA')}`) de los casos de homicidio intencional como se puede ver en la Figura \@ref(fig:sucesoshiquienvictimariobarrasgraf). En consecuencia, cuando el codificador selecciona esta opción, el sistema le atribuye un "NA" a todos aquellos sucesos que no encajen dentro de esta categoría. 
+
+(ref:sucesoshiconocidofamiliarvictimariohi) Número de sucesos de homicidio intencional discriminados según si el victimario era conocido o familiar^[En este caso la alta cardinalidad de casos perdidos (`r {sum(is.na(sucesoshi_conocidofamiliarvictimario$victimario_conocido)| sucesoshi_conocidofamiliarvictimario$victimario_conocido == 'NA'|is.na(sucesoshi_conocidofamiliarvictimario$infodelito2)|sucesoshi_conocidofamiliarvictimario$infodelito2 == 'NA')} `) no debe sorprender ya que la opción "familiar/conocido" de la pregunta No. 58 constituye un subconjunto (`r  {nrow(sucesoshi_conocidofamiliarvictimario)}-{sum(is.na(sucesoshi_conocidofamiliarvictimario$victimario_conocido)| sucesoshi_conocidofamiliarvictimario$victimario_conocido == 'NA'|is.na(sucesoshi_conocidofamiliarvictimario$infodelito2)|sucesoshi_conocidofamiliarvictimario$infodelito2 == 'NA')}`) de los casos de homicidio intencional como se puede ver en la Figura \@ref(fig:sucesoshiquienvictimariobarrasgraf). En consecuencia, cuando el codificador selecciona esta opción, el sistema le atribuye un "NA" a todos aquellos sucesos que no encajen dentro de esta categoría.].
+
+```{r sucesoshiconocidofamiliearvictimariobarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshiconocidofamiliarvictimariohi)'}
+plot(sucesoshiconocidofamiliarvictimario_barras)
+```
+
+##	Victimario funcionario de seguridad
+
+```{r sucesoshicuerposeguridadvictimariobarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_cuerposeguridadvictimario_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesoshicuerposeguridadvictimariohi) Número de sucesos de homicidio intencional discriminados según el cuerpo de seguridad al que pertenece el victimario.
+
+```{r sucesoshicuerposeguridadvictimariobarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshicuerposeguridadvictimariohi)'}
+plot(sucesoshicuerposeguridadvictimario_barras)
+```
+
+## ¿Con que se relaciona el homicidio? 
+
+```{r sucesoshiconquerelacionahibarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_conquerelacionahi_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesoshiconquerelacionahi) Número de sucesos de homicidio intencional discriminados según el contexto del suceso.
+
+```{r sucesoshiconquerelacionahibarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshiconquerelacionahi)'}
+plot(sucesoshiconquerelacionahi_barras)
+```
+
+## Contexto del homicidio intencional 
+
+```{r sucesoshicontextohibarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_contextohi_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesoshicontextohi) Número de sucesos de homicidio intencional discriminados según el contexto del homicidio.
+
+```{r sucesoshicontextohibarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshicontextohi)'}
+plot(sucesoshicontextohi_barras)
+```
+
+## Presuncion del contexto
+
+```{r sucesoshiprescontextohi64pie, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_presuncioncontexto64_pie.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesoshiprescontextohi64) Proporción de sucesos de homicidio intencional discriminados si el contexto del homicidio es presunción del codificador o estipulado en el artículo de prensa.
+
+```{r sucesoshiprescontextohipiegraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshiprescontextohi64)'}
+plot(sucesosdelhiprescontexto64_pie)
+```
+
+## Motivación del homicidio intencional 
+
+```{r sucesoshimotivacionhibarra, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_motivacionhi_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesoshimotivacionhi) Número de sucesos de homicidio intencional discriminados según su motivación.
+
+```{r sucesoshimotivacionhibarragraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshimotivacionhi)'}
+plot(sucesoshimotivacionhi_barras)
+```
+
+## Presunción de la motivación
+
+```{r sucesoshipresmotivacionhipie, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesohi_presuncionmotivacion66_pie.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesoshipresmotivacionhi) Proporción de sucesos de homicidio intencional discriminados según si la motivación corresponde a la presunción del codificador o el artículo de prensa claramente lo establece.
+
+```{r sucesoshipresmotivacionhipiegraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesoshipresmotivacionhi)'}
+plot(sucesosdelhipresmotivacion66_pie)
+```

@@ -1,0 +1,100 @@
+# Víctimas homicidio intencional
+
+## Edad y sexo de la víctima
+
+(ref:victimasdelhiedadsexo) Número de víctimas por homicidio intencional discrimandos según edad y sexo.
+
+```{r victimasdelhipiramide, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelhi_edadsexo_piramide.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhiedadsexograf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhiedadsexo)'}
+plot(victimasdelhi_piramide)
+```
+
+## Estado conyugal de la víctima
+
+(ref:victimasdelhiconyugal) Número de víctimas por homicidio intencional discriminados según estado conyugal.
+
+```{r victimasdelhiconyugaldona, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelhi_conyugal_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhiconyugalgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhiconyugal)'}
+plot(victimasdelhiconyugal_donagraf)
+```
+
+## Polivictimizado
+
+(ref:victimasdelhipoli) Número de víctimas por homicidio intencional discrimandos según condicion de polivictimización.
+
+```{r victimasdelhipolivic, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelhi_polivictimizado_pie.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhipoligraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhipoli)'}
+plot(victimasdelhipoli_pie)
+```
+
+## Condición de la víctima
+
+(ref:victimasdelhicond) Número de víctimas por homicidio intencional discrimandos según condicion de civil o perteneciente a un cuerpo de seguridad.
+
+```{r victimasdelhicondi, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelhi_condicion_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhicondigraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhicond)'}
+plot(victimasdelhicondicion_donagraf)
+```
+
+## ¿La víctima era delincuente? 
+
+(ref:victimasdelhivictideli) Número de víctimas por homicidio intencional discriminados según condición de ser o no delincuentes.
+
+```{r victimasdelhivictidel, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelhi_victideli_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhivictideligraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhivictideli)'}
+plot(victimasdelvictideli_donagraf)
+```
+
+## Actividad de la víctima 
+
+(ref:victimasdelhiactividad) Número de víctimas por homicidio intencional discriminados según la actividad a la que se dedicaban.
+
+```{r victimasdelhiactivi, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelhi_actividad_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhiactividadgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhiactividad)'}
+plot(victimasdelactividad_donagraf)
+```
+
+## Ocupación de la víctima 
+Tras una primera mirada a esta figura, rápidamente nos percatamos de lo difícil que resulta extraer y comprender la información. En parte, esta dificultad la podemos atribuir a las multiples opciones de "ocupación" en la que se subdividen los datos -como podemos apreciar en los elementos que integran la leyenda-. Otra posible razón es la paleta de colores, ya que la gradación no permite separar, visualmente, todas las opciones. Si bien es posible utilizar una paleta que delimite mejor entre las opciones, cuando son tantas, es preferible recurrir a otra representación para ayudar al lector.  
+
+(ref:victimasdelhiocupacion) Número de víctimas por homicidio intencional discriminados según su ocupación.
+
+```{r victimasdelhiocupacion, results='hide',echo=FALSE,message=FALSE, warning=T, error=TRUE,eval=TRUE, cache=F}
+source("victimasdelhi_ocupacion_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasdelhiocupaciongraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasdelhiocupacion)'}
+plot(victimasdelocupacion_donagraf)
+```
+
+
+En este sentido, una posible solución consistiría en sustituir la figura \@ref(fig:victimasdelhiocupaciongraf) por una tabla. Este formato, sin lugar a dudas, ayudaría al usuario a extraer la información, en particular, con aquellas categorias que exhiben magnitudes bajas como se puede apreciar en la tabla  \@ref(tab:victimasdelhiocupaciontable). Adicionalmente, la jerarquización según el orden de magnitud permite al lector tener una idea de la importancia de cada categoría con un mínimo esfuerzo  
+
+
+(ref:victimasdelhiocupaciontable) **Número y proporción de víctimas por homicidio intencional discriminados por su ocupación. Período de recolección de información: `r stringr::str_glue("{format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}")`; n=`r {nrow(victimasdelocupa)}` (`r {sum(is.na(victimasdelocupa$ocupacion_victima_2)| victimasdelocupa$ocupacion_victima_2 == 'NA')}` casos perdidos por información faltante) en `r {prensa_victimasdelocupacion_sel}` medios de prensa consultados.** 
+
+```{r victimasdelhiocupaciontable, echo=FALSE, warning=FALSE,cache=F}
+knitr::kable(
+  head(tabla_ocupacion[, 1:3], 14), booktabs = T,align = "lcr",
+  caption = '(ref:victimasdelhiocupaciontable)')
+
+```
+

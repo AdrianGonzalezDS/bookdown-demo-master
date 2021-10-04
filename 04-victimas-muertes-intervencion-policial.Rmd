@@ -1,0 +1,73 @@
+# Víctimas intervención policial
+
+## Edad y sexo de la víctima
+
+(ref:victimasmiledadsexo) Número víctimas por intervención policial discriminados por edad y sexo.
+
+```{r victimasmilpiramide, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasmil_edadsexo_piramide.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmiledadsexo, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasmiledadsexo)'}
+plot(a)
+```
+
+## Estado conyugal de la víctima 
+
+(ref:victimasmilconyugal) Estado conyugal de víctimas por intervención policial.
+
+```{r victimasmildonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasmil_conyugal_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmilconyugal, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasmilconyugal)'}
+plot(victimasmil_conyugal_donagraf)
+```
+
+## Condición de la víctima 
+
+(ref:victimasmilcondicion) Proporción de víctimas por intervención policial que eran civiles o eran funcionarios de seguridad.
+
+```{r victimasmilcondiciondonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasmil_condicion_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmilcondicion, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasmilcondicion)'}
+plot(victimasmil_condicion_donagraf)
+```
+
+## ¿La víctima era delincuente? 
+
+(ref:victimasmildeli) Proporción de víctimas que eran o no delincuentes.
+
+```{r victimasmildelidonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasmil_victideli_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmildeligraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasmildeli)'}
+plot(victimasmil_victideli_donagraf)
+```
+
+## Actividad de la víctima 
+
+(ref:victimasmilactividad) Proporción de víctimas que eran o no delincuentes.
+
+```{r victimasmilactividaddonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasmil_actividad_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmilactividadgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasmilactividad)'}
+plot(victimasmil_actividad_donagraf)
+```
+
+## Ocupación de la víctima 
+
+(ref:victimasmilocupacion) Proporción de víctimas por intervención policial según su ocupación.
+
+```{r victimasmilocupaciondonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasmil_ocupacion_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmilocupaciongraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasmilocupacion)'}
+plot(victimasmil_ocupacion_donagraf)
+```

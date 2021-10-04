@@ -1,0 +1,17 @@
+# Indicadores numéricos básicos 
+a.	Número total de eventos: **`r {nrow(sucesos)}`**
+
+```{r sucesosmip, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("indicadores_num_basicos.R", echo = F,local = knitr::knit_global())
+```
+
+b.	Número total de eventos de muertes por intervención policial: **`r {nrow(sucesosmip)}`**
+c.	Número total de eventos de delitos: **`r {nrow(sucesosdelito)}`**
+d.	Número total del delito de homicidio intencional: **`r {nrow(sucesoshi)}`**
+e.	Número total de tentativa de homicidio intencional: **`r {nrow(sucesosthi)}`**
+f.	Número total de los delitos restantes: **`r {nrow(sucesosodel)}`**
+g.	Número total de muertes por intervención policial: **$\ge$ `r nmip`**
+h.	Número total de víctimas de delitos reportados: **$\ge$ `r ndel`**
+i.	Número total de víctimas de homicidio intencional: **$\ge$ `r ndelhi`**
+j.	Número total de víctimas de tentativa de homicidio intencional: **$\ge$ `r ndelthi`** 
+

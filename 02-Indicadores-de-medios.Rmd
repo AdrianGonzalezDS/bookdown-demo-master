@@ -1,0 +1,11 @@
+# Indicadores de medios
+
+```{r imedios, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("indicadores_de_medios.R", echo = F,local = knitr::knit_global())
+```
+
+a.	Fecha de inicio de la recolección de datos en el período cubierto: **`r stringr::str_glue(format(startdate, '%d %b %Y'))`**
+b.	Fecha de finalización de la recolección de datos en el período cubierto: **`r stringr::str_glue(format(enddate, '%d %b %Y'))`**
+c.	Total de delitos en el período cubierto: **`r ndeli`**
+d.	Número de medios de información consultados: **`r nmedios`**
+

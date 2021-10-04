@@ -1,0 +1,46 @@
+# Eventos intervención policial
+
+## Cuerpos de seguridad
+
+(ref:sucesospol) Número de sucesos por cuerpo de seguridad.
+
+```{r sucesospolbarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesospolBarras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesospol, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesospol)'}
+plot(sucesospol_barras)
+```
+
+## Sitio de ocurrencia
+
+(ref:sucesosmildondeplot) Número de sucesos y proporción de acuerdo al lugar donde ocurrió el evento.
+
+```{r sucesosmildondebase, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesos.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesosmildondebarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesomil_donde_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesosmildondeplot, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosmildondeplot)'}
+plot(sucesosmildonde_barras)
+```
+
+
+## Día de ocurrencia
+
+(ref:sucesosmilcuandoplot) Número de sucesos y proporción de acuerdo al día en que ocurrió el evento.
+
+```{r sucesosmilcuandobase, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesos.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesosmilcuandobarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesomil_cuando_barras.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesosmilcuandoplot, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosmilcuandoplot)'}
+plot(sucesosmilcuando_barras)
+```

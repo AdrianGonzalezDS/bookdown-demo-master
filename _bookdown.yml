@@ -1,0 +1,11 @@
+book_filename: "bookdown-demo"
+#new_session: yes
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+
+
+  ui:
+    chapter_name: ""
+delete_merged_file: true

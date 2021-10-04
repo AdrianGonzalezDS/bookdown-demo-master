@@ -1,0 +1,164 @@
+# Eventos otros delitos
+
+## Proporciones generales
+```{r sucesosotrosdelbarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesosotrosdel_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesosotrosdel) Proporción de sucesos de otros delitos distintos a homicidio intencional discriminados según el tipo de delito.
+
+```{r sucesosotrosdelbarragraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosotrosdel)'}
+plot(sucesosotrosdel_barras)
+```
+
+## Número de víctimas
+```{r sucesosotrosdelboxplot, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesosotrosdel_numvictimas_boxplot.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesosotrosdelnumvictimas) Distribución del número de víctimas por sucesos de otros delitos distintos a homicidio intencional discriminados según el tipo de delito.
+
+```{r sucesosotrosdelnumvictimasboxplotgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosotrosdelnumvictimas)'}
+plot(sucesosotrosdelnumvictimas_boxplot)
+```
+
+## Número de víctimarios
+```{r sucesosotrosdelnumvictimariosboxplot, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesosotrosdel_numvictimarios_boxplot.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesosotrosdelnumvictimarios) Distribución del número de víctimarios por sucesos de otros delitos distintos a homicidio intencional discriminados según el tipo de delito.
+
+```{r sucesosotrosdelnumvictimariosboxplotgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosotrosdelnumvictimarios)'}
+plot(sucesosotrosdelnumvictimarios_boxplot)
+```
+
+## Día de ocurrencia
+
+```{r suodelcuanbar, results='hide',echo=FALSE,message=FALSE, warning=T,error=TRUE, eval=TRUE, cache=F}
+source("sucesostrosdel_cuando_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucodelcuando) Distribución del número de víctimarios por sucesos de otros delitos distintos a homicidio intencional discriminados según cuando ocurrió el delito.
+
+```{r sucodelcuanbargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucodelcuando)'}
+plot(sucesosotrosdelcuando_barras)
+```
+
+## Sitio de ocurrencia
+
+```{r sucotrosdeldondebar, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_donde_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesosotrosdeldonde) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según donde fueron cometidos.
+
+```{r sucesosotrosdeldondebarrasgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosotrosdeldonde)'}
+plot(sucesosotrosdeldonde_barras)
+```
+
+## Cercanía a la vivienda de la víctima
+
+```{r sucotrosdelcercaniabar, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_cercania_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:sucesosotrosdelcercania) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según cercanía a la vivienda de la víctima.
+
+```{r suodelcercabargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:sucesosotrosdelcercania)'}
+plot(sucesosotrosdelcercania_barras)
+```
+
+## Tipo de arma
+
+```{r suodeltarmabar, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_tipoarma_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodeltarma) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según el tipo de arma utilizada.
+
+```{r suodeltarmabargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodeltarma)'}
+plot(suodeltipoarma_barras)
+```
+
+## Relación con victimario
+
+```{r suodelqvictimario, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_quienvictimario_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelqvictimario) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según el tipo de relación con el victimario.
+
+```{r suodelqvictimariobargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelqvictimario)'}
+plot(suodeltipoarma_barras)
+```
+
+## ¿Victimario conocido o familiar?
+
+```{r suodecvictimario, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_conocidofamiliarvictimario_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelcvictimario) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según si el victimario era conocido o familiar.
+
+```{r suodelcvictimariobargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelqvictimario)'}
+plot(suodelvictimarioconocido_barras)
+```
+
+## ¿El victimario es funcionario?
+
+```{r suodeosvictimario, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_oseguridadvictimario_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelosvictimario) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según el organismo de seguridad del victimario en el caso de que este fuese funcionario.
+
+```{r suodelosvictimariobargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelosvictimario)'}
+plot(suodelvictimariocseguridad_barras)
+```
+
+
+## ¿Con que se relaciona el suceso?
+
+```{r suodecque, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_conquerelaciona_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelcque) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según el contexto del suceso.
+
+```{r suodelcquebargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelcque)'}
+plot(suodelconquerelaciona_barras)
+```
+
+```{r suodeprescque, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_presconquerelaciona_pie.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelprescque) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según si el contexto del suceso es presunción del codificador o estipulado en el artículo de prensa.
+
+```{r suodelprescquebargraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelprescque)'}
+plot(suprescquelaciona_pie)
+```
+
+## Motivación del suceso
+
+```{r suodelmotivacion, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_motivacion_barras.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelmotiv) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según la motivacion del delito.
+
+```{r suodelmotivacionbar, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelmotiv)'}
+plot(suodelmotivacion_barras)
+```
+
+```{r suodepresmotivacion, results='hide',echo=FALSE,message=FALSE, error=T, eval=TRUE, warning=FALSE,cache=F}
+source("sucesostrosdel_presmotivacion_pie.R", echo = F,local = knitr::knit_global())
+```
+
+(ref:suodelpresmotivacionpie) Distribución del número de sucesos de otros delitos distintos a homicidio intencional discriminados según si la motivación del suceso es presunción del codificador o estipulado en el artículo de prensa.
+
+```{r suodelpresmotivacionpiegraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:suodelpresmotivacionpie)'}
+plot(suodelpresmotivacion_pie)
+```
+

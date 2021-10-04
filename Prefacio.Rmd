@@ -1,0 +1,17 @@
+
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://observatoriodeviolencia.org.ve/news/informe-semestral-regional-de-violencia-2021-guarico/'}
+knitr::include_graphics('images/cover.jpg', dpi = NA)
+```
+
+```{r victimasdelhiedadsexo, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasdelito.R", echo = F,local = knitr::knit_global())
+```
+
+```{r sucesos, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("sucesos.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasmil, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasMIL.R", echo = F,local = knitr::knit_global())
+```

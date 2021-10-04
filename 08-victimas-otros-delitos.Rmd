@@ -1,0 +1,106 @@
+# Víctimas de otros delitos
+## Edad y sexo de la víctima
+
+(ref:victimasodeledadsexo) Número víctimas de otros delitos distintos a homicidio intencional discriminados por edad y sexo.
+
+```{r victimasodelpiramide, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasodel_edadsexo_piramide.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodeledadsexopirgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodeledadsexo)'}
+plot(victimasodel_piramide)
+```
+
+## Estado conyugal de la víctima 
+
+(ref:victimasodelconyugal) Estado conyugal de víctimas por otros delitos distintos a homicidio intencional.
+
+```{r victimasodeldonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasodel_conyugal_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodelconyugal, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodelconyugal)'}
+plot(victimasodelconyugal_donagraf)
+```
+
+## Polivictimizado
+
+(ref:victimasodelpoli) Número de víctimas por otros delitos distintos a homicidio intencional discriminados según condición de polivictimización.
+
+```{r victimasodelpolivic, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasodel_polivictimizado_pie.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodelpoligraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodelpoli)'}
+plot(victimasodelpoli_pie)
+```
+
+
+## Condición de la víctima 
+
+(ref:victimasodelcondicion) Proporción de víctimas de otros delitos distintos a homicidio intencional discriminadas según su condición de civiles o funcionarios de seguridad.
+
+```{r victimasodelcondiciondonagraf, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasodel_condicion_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodelcondicion, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodelcondicion)'}
+plot(victimasodelcondicion_donagraf)
+```
+
+## ¿La víctima era delincuente? 
+
+(ref:victimasodelvictideli) Número de víctimas por otros delitos distintos a homicidio intencional discriminados según condición de la víctima de ser o no delincuentes.
+
+```{r victimasodelvictidel, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasodel_victideli_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodelvictideligraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodelvictideli)'}
+plot(victimasodel_victideli_donagraf)
+```
+
+
+## Actividad de la víctima 
+
+(ref:victimasodelactividad) Número de víctimas por delitos distintos a homicidio intencional discriminados según su actividad.
+
+```{r victimasodelactividad, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
+source("victimasodel_actividad_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodelactividadgraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodelactividad)'}
+plot(victimasodel_actividad_donagraf)
+```
+
+(ref:victimasodelactividadtable) Número y proporción de víctimas por delitos distintos a homicidio intencional discriminados por su actividad. Período de recolección de información: `r stringr::str_glue("{format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}")`; n=`r {nrow(victimasodelactividad)}` (`r {sum(is.na(victimasodelactividad$victima_era_2)| victimasodelactividad$victima_era_2 == 'NA')}` casos perdidos por información faltante) en `r {prensa_victimasodelactividadi_sel}` medios de prensa consultados. 
+
+```{r victimasodelactividadtable, echo=FALSE, warning=FALSE,cache=F}
+knitr::kable(
+  head(tabla_ocupacion[, 1:3], 14), booktabs = TRUE,align = "lcr",
+  caption = '(ref:victimasodelactividadtable)', position = "left")
+
+```
+
+## Ocupación de la víctima 
+
+(ref:victimasodelocupacion) Número de víctimas por otros delitos distintos a homicidio intencional discriminados según su ocupación.
+
+```{r victimasodelocupacion, results='hide',echo=FALSE,message=FALSE, warning=T, error=TRUE,eval=TRUE, cache=F}
+source("victimasodel_ocupacion_donagraf.R", echo = F,local = knitr::knit_global())
+```
+
+```{r victimasodelocupaciongraf, echo=FALSE, warning=FALSE,cache=F,fig.cap = '(ref:victimasodelocupacion)'}
+plot(victimasodelocupacion_donagraf)
+```
+
+(ref:victimasodelocupaciontable) Número y proporción de víctimas por otros delitos distintos a homicidio intencional discriminados por su ocupación. Período de recolección de información: `r stringr::str_glue("{format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}")`; n=`r {nrow(victimasodelocupa)}` (`r {sum(is.na(victimasodelocupa$ocupacion_victima_2)| victimasodelocupa$ocupacion_victima_2 == 'NA')}` casos perdidos por información faltante) en `r {prensa_victimasodelocupacion_sel}` medios de prensa consultados. 
+
+```{r victimasodelocupaciontable, echo=FALSE, warning=FALSE,cache=F}
+knitr::kable(
+  head(tabla_ocupacion[, 1:3], 14), booktabs = TRUE,align = "lcr",
+  caption = '(ref:victimasodelocupaciontable)', position = "left")
+
+```
+
+
