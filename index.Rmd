@@ -19,5 +19,5 @@ cover-image: "images/cover.png"
 knitr::include_graphics('images/cover.jpg', dpi = NA)
 ```
 
-# Introducción
+
 

@@ -56,8 +56,6 @@ fig:suodelcquebargraf
 fig:suodelprescquebargraf
 fig:suodelmotivacionbar
 fig:suodelpresmotivacionpiegraf
-introducción
-metodo
 indicadores-de-medios
 indicadores-numéricos-básicos
 víctimas-intervención-policial

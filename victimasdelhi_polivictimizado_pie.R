@@ -70,7 +70,7 @@ victimasdelhipoli_pie<- ggplot(victimasdelhipoli_porcent,
         axis.ticks = element_blank(),
         plot.title=element_blank())+
   guides(fill=guide_legend(title=''))+
-  labs(caption = stringr::str_glue("Fuente: Observatorio de prensa OVV  \nn = {nrow(victimasdelhipol)} ({sum(is.na(victimasdelhipol$poli_victima)| victimasdelhipol$poli_victima == 'NA')} casos perdidos por informaciÃ³n faltante) en {prensa_victimasdelhipoli_sel} medios de prensa consultados \nPerÃ³odo de recolecciÃ³n de informaci?n: {format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}"))
+  labs(caption = stringr::str_glue("Fuente: Observatorio de prensa OVV  \nn = {nrow(victimasdelhipol)} ({sum(is.na(victimasdelhipol$poli_victima)| victimasdelhipol$poli_victima == 'NA')} casos perdidos por información faltante) en {prensa_victimasdelhipoli_sel} medios de prensa consultados \nPeríodo de recolección de información: {format(startdate, '%d %b')}-{format(enddate, '%d %b %Y')}"))
 
 victimasdelhipoli_pie
 
