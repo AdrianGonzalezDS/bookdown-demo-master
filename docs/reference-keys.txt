@@ -83,7 +83,7 @@ eventos-homicidio-intencional-hi
 presunción-del-codificador-hi
 tipo-de-muerte-hi
 número-de-víctimas-hi
-número-de-victimario-hi
+número-de-victimarios-hi
 día-de-ocurrencia-hi
 sitio-de-ocurrencia-del-hi
 tipo-de-arma

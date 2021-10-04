@@ -31,7 +31,7 @@ plot(sucesosmildonde_barras)
 
 ## Día de ocurrencia
 
-(ref:sucesosmilcuandoplot) Número de sucesos y proporción de acuerdo al día en que ocurrió el evento.
+(ref:sucesosmilcuandoplot) Número de sucesos y proporción de acuerdo al día de ocurrencia del evento.
 
 ```{r sucesosmilcuandobase, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("sucesos.R", echo = F,local = knitr::knit_global())

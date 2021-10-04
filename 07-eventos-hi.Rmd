@@ -54,7 +54,7 @@ source("sucesohi_tipomuhi_vic_boxplot.R", echo = F,local = knitr::knit_global())
 plot(sucesoshi_tipomuhi_vic_boxplot)
 ```
 
-## Número de victimario HI
+## Número de victimarios HI
 
 (ref:sucesoshitipomuhivictimario) Número de victimarios por suceso de homicidio intencional discriminados según el tipo de muerte. Media: *; mediana: |; valor atípico: ○.
 
@@ -68,7 +68,7 @@ plot(sucesoshi_tipomuhi_victimario_boxplot)
 
 ## Día de ocurrencia HI
 
-(ref:sucesoshicuandohi) Número de sucesos de de homicidio intencional discriminados según día de ocurrencia.
+(ref:sucesoshicuandohi) Número de sucesos de homicidio intencional discriminados según día de ocurrencia.
 
 ```{r sucesoshicuandobarras, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("sucesohi_cuando_barras.R", echo = F,local = knitr::knit_global())
