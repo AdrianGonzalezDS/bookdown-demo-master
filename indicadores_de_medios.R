@@ -42,11 +42,11 @@ ndeli <- nrow(delitos)
 ndeli
 
 grup_delitos <- delitos %>%
-  group_by(numero_delito) %>% # Variable a ser transformada
+  group_by(infodelito2) %>% # Variable a ser transformada
   count() %>%
   ungroup() %>%
   mutate(perc = `freq` / sum(`freq`)) %>%
-  mutate(tdel = `freq` * numero_delito) %>%
+  mutate(tdel = `freq` * infodelito2) %>%
   arrange(desc(`freq`)) %>% #solo organiza en orden alfabetico
   mutate(label_pos = cumsum(perc) - perc / 2,
          porcentaje = paste0(round(perc * 100,1),"%")) %>%
