@@ -38,7 +38,7 @@ plot(victimasdelhipoli_pie)
 
 ## Condición de la víctima
 
-(ref:victimasdelhicond) Número de víctimas por homicidio intencional discriminados según condicion de civil o perteneciente a un cuerpo de seguridad.
+(ref:victimasdelhicond) Número de víctimas por homicidio intencional discriminados según condición: civiles o funcionarios de seguridad.
 
 ```{r victimasdelhicondi, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("victimasdelhi_condicion_donagraf.R", echo = F,local = knitr::knit_global())
@@ -50,7 +50,7 @@ plot(victimasdelhicondicion_donagraf)
 
 ## ¿La víctima era delincuente? 
 
-(ref:victimasdelhivictideli) Número de víctimas por homicidio intencional discriminados según condición de ser o no delincuentes.
+(ref:victimasdelhivictideli) Número de víctimas por homicidio intencional discriminados según sus antecedentes delictuales.
 
 ```{r victimasdelhivictidel, results='hide',echo=FALSE,message=FALSE, warning=FALSE,cache=F}
 source("victimasdelhi_victideli_donagraf.R", echo = F,local = knitr::knit_global())
