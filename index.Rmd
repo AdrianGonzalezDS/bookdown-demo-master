@@ -1,6 +1,6 @@
 --- 
 title: "Indicadores de reportes"
-author: "Observatorio Venezolano de Violencia"
+author: "extraidos a partir del instrumento de captura de datos CSPro"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -13,7 +13,7 @@ description: ""
 cover-image: "images/cover.png"
 
 ---
-# OVV {-}
+# Observatorio Venezolano de Violencia {-}
 
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://observatoriodeviolencia.org.ve/news/informe-semestral-regional-de-violencia-2021-guarico/'}
 knitr::include_graphics('images/cover.jpg', dpi = NA)
