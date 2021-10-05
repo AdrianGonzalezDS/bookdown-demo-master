@@ -3,9 +3,9 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Indicadores para reportes</a></li>
+        <li><a href="./">Indicadores de violencia</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="https://adriangonzalezds.github.io/bookdown-demo-master/" target="blank">Publicado con github | bookdown</a></li>
     edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
