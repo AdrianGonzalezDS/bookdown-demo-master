@@ -32,21 +32,17 @@ nmedios <- nrow(grup_medios)
 nmedios
 ###############################################################
 delitos <- sucesos %>%
-  select(infodelito2) %>%
-  filter(infodelito2=="Si" &
-           !infodelito2 %in% c("NA", NA))
+  select(numero_delito) %>%
+  filter(!numero_delito %in% c("NA", NA,0))
 
 delitos
 
-ndeli <- nrow(delitos)
-ndeli
-
 grup_delitos <- delitos %>%
-  group_by(infodelito2) %>% # Variable a ser transformada
+  group_by(numero_delito) %>% # Variable a ser transformada
   count() %>%
   ungroup() %>%
   mutate(perc = `freq` / sum(`freq`)) %>%
-  mutate(tdel = `freq` * infodelito2) %>%
+  #mutate(tdel = `freq` * infodelito2) %>%
   arrange(desc(`freq`)) %>% #solo organiza en orden alfabetico
   mutate(label_pos = cumsum(perc) - perc / 2,
          porcentaje = paste0(round(perc * 100,1),"%")) %>%
@@ -54,5 +50,5 @@ grup_delitos <- delitos %>%
 
 grup_delitos
 
-ndelitos <- grup_delitos[6, 4]
+ndelitos <- grup_delitos[6, 2]
 ndelitos
